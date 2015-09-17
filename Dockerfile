@@ -1,5 +1,5 @@
 # image name lzh/mariadb:kilo
-FROM mariadb:10.0.20
+FROM mariadb:5.5.45
 
 MAINTAINER Zuhui Liu penguin_tux@live.com
 
