@@ -10,5 +10,7 @@ character-set-server = utf8
 log_bin       = /var/lib/mysql/mariadb-bin
 log_bin_index = /var/lib/mysql/mariadb-bin.index
 
+binlog_format = mixed
+
 [client]
 default-character-set = utf8
