@@ -1,5 +1,5 @@
-# image name lzh/mariadb:kilo
-FROM mariadb:5.5.45
+# image name lzh/mariadb:5.5.46
+FROM mariadb:5.5.46
 
 MAINTAINER Zuhui Liu penguin_tux@live.com
 
@@ -11,14 +11,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo "Asia/Shanghai" > /etc/timezone && \
 	dpkg-reconfigure -f noninteractive tzdata
-
-RUN echo "deb http://mirrors.aliyun.com/debian/ wheezy main non-free contrib" > /etc/apt/sources.list
-RUN echo "deb http://mirrors.aliyun.com/debian-security/ wheezy/updates main non-free contrib" >> /etc/apt/sources.list
-RUN echo "deb http://mirrors.aliyun.com/debian/ wheezy-updates main non-free" >> /etc/apt/sources.list
-RUN echo "deb http://mirrors.aliyun.com/debian/ wheezy-backports main non-free" >> /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get dist-upgrade -y
-RUN apt-get clean
 
 RUN env --unset=DEBIAN_FRONTEND
 
