@@ -1,10 +1,10 @@
-# image name lzh/mariadb:liberty
-FROM mariadb:5.5.47
+# image name lzh/mariadb:kilo
+FROM mariadb:5.5.45
 
 MAINTAINER Zuhui Liu penguin_tux@live.com
 
 ENV BASE_VERSION 2015-12-17
-ENV OPENSTACK_VERSION liberty
+ENV OPENSTACK_VERSION kilo
 
 
 ENV DEBIAN_FRONTEND noninteractive
